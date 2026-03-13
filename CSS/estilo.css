@@ -1,0 +1,323 @@
+header {
+    float: left;
+    width: 100%;
+    background-color: #ff7300;
+    color: #fff;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 20px;
+    text-shadow: -2px -2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000, 2px 2px 1px #000;
+}
+
+footer {
+    float: left;
+    width: 100%;
+    background-color: #ff7300;
+    color: #ffffff;
+    bottom: 0px;
+    text-align: center;
+    font-size: 8px;
+    padding: 10px;
+}
+
+h2 {
+    color: #ff7300;
+    text-shadow: 0px 0px 2px #d4d4d4;
+    font-weight: bold;
+}
+
+hr {
+    width: 50%;
+    border: 2px solid #ff7300;
+}
+
+.menuizq {
+    width: 15%;
+    background-color: #ff821ce3;
+    padding: 10px;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: left;
+}
+
+/* ========== Menú Desplegable por Grupos ========== */
+.menu-grupo {
+    list-style: none;
+    margin-bottom: 6px;
+}
+
+.grupo-header {
+    cursor: pointer;
+    padding: 8px 10px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #fff;
+    transition: all 0.3s ease;
+    user-select: none;
+}
+
+.grupo-header:hover {
+    background: rgba(255, 255, 255, 0.3);
+    padding-left: 14px;
+}
+
+.grupo-header.activo {
+    background: rgba(255, 255, 255, 0.25);
+    border-left: 3px solid #fff;
+}
+
+.grupo-flecha {
+    font-size: 10px;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.grupo-lista {
+    list-style: none;
+    padding: 4px 0 4px 10px;
+    margin: 0;
+}
+
+.cont {
+    width: 85%;
+    padding: 30px;
+    float: left;
+    background-color: #ffffff;
+    border-radius: 15px;
+    /* Bordes redondeados para que se vea más moderno */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    /* Sombra suave y profunda */
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 2px;
+}
+
+.btn-secondary {
+    font-weight: bold;
+    background-color: #ff7300 !important;
+    border: none;
+    padding: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s;
+}
+
+.btn-secondary:hover {
+    font-weight: bold;
+    transition-duration: 0.5s;
+    transform: scale(1.02);
+    /* Se agranda un pelín al tocarlo */
+    box-shadow: 0px 5px 15px rgba(255, 115, 0, 0.4);
+}
+
+.res {
+    font-weight: bold;
+    text-align: left;
+    animation: aparecer 0.5s ease-out;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #ff7300;
+    margin-top: 20px;
+    border-radius: 0 10px 10px 0;
+}
+
+.col-md-6 {
+    font-weight: bold;
+}
+
+.col-md-3 {
+    font-weight: bold;
+}
+
+.col-md-12 {
+    font-weight: bold;
+}
+
+ul li a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    display: block;
+    font-size: 14px;
+    padding: 4px 0px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+ul li a:hover {
+    border-bottom: 1px solid #fff;
+    transition: 0.5s;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Un brillito blanco transparente */
+    padding-left: 20px;
+    /* Se desplaza un poquito a la derecha */
+    text-shadow: 0px 0px 5px #fff;
+
+}
+
+.form-control {
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    /* Para que el cambio al hacer clic sea suave */
+}
+
+.form-control:focus {
+    border-color: #ff7300;
+    box-shadow: 0 0 10px rgba(255, 115, 0, 0.3);
+    /* Brillo naranja al escribir */
+}
+
+header,
+footer {
+    background: linear-gradient(135deg, #ff7300 0%, #ff9d4d 100%);
+    border: none;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== Botón de Modo Oscuro ========== */
+#darkModeBtn {
+    float: right;
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
+    font-size: 22px;
+    padding: 6px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+#darkModeBtn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* ========== Modo Oscuro ========== */
+body.dark-mode {
+    background-color: #1a1a2e !important;
+    color: #e0e0e0 !important;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+    background: linear-gradient(135deg, #16213e 0%, #0f3460 100%) !important;
+}
+
+body.dark-mode .menuizq {
+    background-color: #16213e !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .grupo-header {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #b0b0d0 !important;
+}
+
+body.dark-mode .grupo-header:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #fff !important;
+}
+
+body.dark-mode .grupo-header.activo {
+    background: rgba(255, 255, 255, 0.12) !important;
+    border-left-color: #ff9d4d !important;
+}
+
+body.dark-mode ul li a {
+    color: #b0b0d0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+body.dark-mode ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+body.dark-mode .cont {
+    background-color: #222244 !important;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4) !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode h2 {
+    color: #ff9d4d !important;
+    text-shadow: 0px 0px 5px rgba(255, 157, 77, 0.3) !important;
+}
+
+body.dark-mode hr {
+    border-color: #ff9d4d !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #2a2a4a !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444466 !important;
+}
+
+body.dark-mode .form-control:focus {
+    border-color: #ff9d4d !important;
+    box-shadow: 0 0 10px rgba(255, 157, 77, 0.4) !important;
+}
+
+body.dark-mode .form-select {
+    background-color: #2a2a4a !important;
+    color: #e0e0e0 !important;
+    border: 1px solid #444466 !important;
+}
+
+body.dark-mode label {
+    color: #c0c0d8 !important;
+}
+
+body.dark-mode .res {
+    background-color: #2a2a4a !important;
+    color: #e0e0e0 !important;
+    border-left: 5px solid #ff9d4d !important;
+}
+
+body.dark-mode .btn-secondary {
+    background-color: #0f3460 !important;
+    box-shadow: 0px 5px 15px rgba(15, 52, 96, 0.4);
+}
+
+body.dark-mode .btn-secondary:hover {
+    box-shadow: 0px 5px 15px rgba(15, 52, 96, 0.6) !important;
+}
+
+body.dark-mode #darkModeBtn {
+    background: rgba(255, 200, 100, 0.25);
+    border-color: rgba(255, 200, 100, 0.5);
+}
+
+body.dark-mode #darkModeBtn:hover {
+    background: rgba(255, 200, 100, 0.4);
+    box-shadow: 0 0 15px rgba(255, 200, 100, 0.3);
+}

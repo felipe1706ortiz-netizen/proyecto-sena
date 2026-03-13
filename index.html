@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...::ADSO::...</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
+</head>
+
+<body>
+    <header>
+        ADSO 3235291
+        <button id="darkModeBtn" onclick="toggleDarkMode()" title="Modo Oscuro">🌙</button>
+    </header>
+    <section>
+        <div class="menuizq">
+            <ul id="menu"></ul>
+        </div>
+        <div class="cont">
+            <div id="tit"></div>
+            <div id="eje1" class="row">
+                <div class="col-md-6">
+                    <label>valor 1:</label>
+                    <input type="number" class="form-control" id="e1v1" value="10">
+                </div>
+                <div class="col-md-6">
+                    <label>valor 2:</label>
+                    <input type="number" class="form-control" id="e1v2" value="15">
+                </div>
+            </div>
+            <div id="eje2" class="row">
+                <div class="col-md-6">
+                    <label>valor 1:</label>
+                    <input type="number" class="form-control" id="e2v1" value="85">
+                </div>
+                <div class="col-md-6">
+                    <label>valor 2:</label>
+                    <input type="number" class="form-control" id="e2v2" value="55">
+                </div>
+            </div>
+            <div id="eje3" class="row">
+                <div class="col-md-6">
+                    <label>valor 1:</label>
+                    <input type="number" class="form-control" id="e3v1" value="85">
+                </div>
+                <br>
+            </div>
+            <div id="eje4" class="row">
+                <div class="col-md-3">
+                    <label>valor 1:</label>
+                    <input type="number" class="form-control" id="e4v1" value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>valor 2:</label>
+                    <input type="number" class="form-control" id="e4v2" value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>valor 3:</label>
+                    <input type="number" class="form-control" id="e4v3" value="0">
+                </div>
+            </div>
+            <div id="eje5" class="row">
+                <div class="col-md-3">
+                    <label>valor 1:</label>
+                    <input type="number" class="form-control" id="e5v1" value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>valor 2:</label>
+                    <input type="number" class="form-control" id="e5v2" value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>valor 3:</label>
+                    <input type="number" class="form-control" id="e5v3" value="0">
+                </div>
+            </div>
+            <div id="eje6" class="row">
+                <div class="col-md-6">
+                    <label>Base del triangulo:</label>
+                    <input type="number" class="form-control" id="e6v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Altura del triangulo:</label>
+                    <input type="number" class="form-control" id="e6v2" value="0">
+                </div>
+            </div>
+            <div id="eje7" class="row">
+                <div class="col-md-6">
+                    <label>valor 1:</label>
+                    <input type="number" class="form-control" id="e7v1" value="0">
+                </div>
+            </div>
+            <div id="eje8" class="row">
+                <div class="col-md-6">
+                    <label>color:</label>
+                    <input type="text" class="form-control" id="e8v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>docenas a vender:</label>
+                    <input type="number" class="form-control" id="e8v2" value="0">
+                </div>
+            </div>
+            <div id="eje9" class="row">
+                <div class="col-md-6">
+                    <label>Numero de productos vendidos:</label>
+                    <input type="number" class="form-control" id="e9v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>valor total de las ventas:</label>
+                    <input type="number" class="form-control" id="e9v2" value="0">
+                </div>
+            </div>
+            <div id="eje10" class="row">
+                <div class="col-md-3">
+                    <label>Marca:</label>
+                    <input type="text" class="form-control" id="e10v1" value="Mazda">
+                </div>
+                <div class="col-md-3">
+                    <label>Modelo:</label>
+                    <input type="number" class="form-control" id="e10v2" value="1994">
+                </div>
+                <div class="col-md-3">
+                    <label>precio:</label>
+                    <input type="number" class="form-control" id="e10v3" value="1000">
+                </div>
+                <div class="col-md-3">
+                    <label>Color:</label>
+                    <select class="form-control form-select" id="e10v4">
+                        <option>Amarillo</option>
+                        <option>Azul</option>
+                        <option>Blanco</option>
+                        <option>Rojo</option>
+                        <option>Negro</option>
+                        <option>verde</option>
+                        <option>otro</option>
+                    </select>
+                </div>
+            </div>
+            <div id="eje11" class="row">
+            </div>
+            <div id="eje12" class="row">
+                <div class="col-md-6">
+                    <label>Cantidad de numeros</label>
+                    <input type="number" class="form-control" id="e12v1" value="10">
+                </div>
+            </div>
+            <div id="eje13" class="row">
+                <div class="col-md-6">
+                    <label>cantidad de numeros:</label>
+                    <input type="number" class="form-control" id="e13v1" value="30">
+                </div>
+            </div>
+            <div id="eje14" class="row">
+                <div class="col-md-12">
+                    <label>Numero mayor a diez:</label>
+                    <input type="number" class="form-control" id="e14v1" value="30">
+                </div>
+            </div>
+            <div id="eje15" class="row">
+                <div class="col-md-12">
+                    <label>Opciones:<br>
+                        1. Sumar (J + K)<br>
+                        2. Residuo (J % K)<br>
+                        3. Division (J / K)<br>
+                        4. Suma Incremental (J + K + L)<br>
+                        5. Multiplicacion (J * K * L)<br>
+                    </label>
+                </div>
+                <div class="col-md-4">
+                    <label>Seleccione una opcion:</label>
+                    <input type="number" class="form-control" id="e15v1" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor J:</label>
+                    <input type="number" class="form-control" id="e15v2" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor K:</label>
+                    <input type="number" class="form-control" id="e15v3" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor L:</label>
+                    <input type="number" class="form-control" id="e15v4" value="0">
+                </div>
+            </div>
+            <div id="eje16" class="row">
+                <div class="col-md-12">
+                    <label>Ingrese un numero mayor que 3:</label>
+                    <input type="number" class="form-control" id="e16v1" value="0">
+                </div>
+            </div>
+            <div id="eje17" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese un numero (mayor):</label>
+                    <input type="number" class="form-control" id="e17v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese un numero (menor):</label>
+                    <input type="number" class="form-control" id="e17v2" value="0">
+                </div>
+            </div>
+            <div id="eje18" class="row">
+                <div class="col-md-6">
+                    <p>Iniciar cronometro</p>
+                </div>
+            </div>
+            <div id="eje19" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese un numero:</label>
+                    <input type="number" class="form-control" id="e19v1" value="0">
+                </div>
+            </div>
+            <div id="eje20" class="row">
+            </div>
+            <div id="eje21" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese el primer numero:</label>
+                    <input type="number" class="form-control" id="e21v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese el segundo numero:</label>
+                    <input type="number" class="form-control" id="e21v2" value="0">
+                </div>
+            </div>
+            <div id="eje22" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese la primera nota:</label>
+                    <input type="number" class="form-control" id="e22v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese la segunda nota:</label>
+                    <input type="number" class="form-control" id="e22v2" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese la tercera nota:</label>
+                    <input type="number" class="form-control" id="e22v3" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese la cuarta nota:</label>
+                    <input type="number" class="form-control" id="e22v4" value="0">
+                </div>
+            </div>
+            <div id="eje23" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese la altura del rectangulo:</label>
+                    <input type="number" class="form-control" id="e23v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese la base del rectangulo:</label>
+                    <input type="number" class="form-control" id="e23v2" value="0">
+                </div>
+            </div>
+            <div id="eje24" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese el radio de la circunferencia:</label>
+                    <input type="number" class="form-control" id="e24v1" value="0">
+                </div>
+            </div>
+            <div id="eje25" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese la base del triangulo y rectangulo:</label>
+                    <input type="number" class="form-control" id="e25v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese la altura del triangulo y rectangulo:</label>
+                    <input type="number" class="form-control" id="e25v2" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese la altura del rectangulo:</label>
+                    <input type="number" class="form-control" id="e25v3" value="0">
+                </div>
+            </div>
+            <div id="eje26" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese el radio del circulo:</label>
+                    <input type="number" class="form-control" id="e26v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese la hipotenusa:</label>
+                    <input type="number" class="form-control" id="e26v2" value="0">
+                </div>
+            </div>
+            <div id="eje27" class="row">
+                <div class="col-md-6">
+                    <label>¿Cuántos litros produjo hoy?:</label>
+                    <input type="number" class="form-control" id="e27v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>¿Cuál es el precio del galón?: $</label>
+                    <input type="number" class="form-control" id="e27v2" value="0">
+                </div>
+            </div>
+            <div id="eje28" class="row">
+                <div class="col-md-3">
+                    <label>Punto 1 - X1:</label>
+                    <input type="number" class="form-control" id="e28v1" value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>Punto 1 - Y1:</label>
+                    <input type="number" class="form-control" id="e28v2" value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>Punto 2 - X2:</label>
+                    <input type="number" class="form-control" id="e28v3" value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>Punto 2 - Y2:</label>
+                    <input type="number" class="form-control" id="e28v4" value="0">
+                </div>
+            </div>
+            <div id="eje29" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese la cantidad de metros requeridos (cm):</label>
+                    <input type="number" class="form-control" id="e29v1" value="0">
+                </div>
+            </div>
+            <div id="eje30" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese la altura de la alberca en metros:</label>
+                    <input type="number" class="form-control" id="e30v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese el largo de la alberca en metros:</label>
+                    <input type="number" class="form-control" id="e30v2" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese el ancho de la alberca en metros:</label>
+                    <input type="number" class="form-control" id="e30v3" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Ingrese el precio del metro cubico ($):</label>
+                    <input type="number" class="form-control" id="e30v4" value="0">
+                </div>
+            </div>
+            <div id="eje31" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese un numero:</label>
+                    <input type="number" class="form-control" id="e31v1" value="0">
+                </div>
+            </div>
+            <div id="eje32" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese un numero:</label>
+                    <input type="number" class="form-control" id="e32v1" value="0">
+                </div>
+            </div>
+            <div id="eje33" class="row">
+                <div class="col-md-6">
+                    <label>¿Cuántos lápices va a llevar?:</label>
+                    <input type="number" class="form-control" id="e33v1" value="0">
+                </div>
+            </div>
+            <div id="eje34" class="row">
+                <div class="col-md-6">
+                    <label>Ingrese el costo del traje: $</label>
+                    <input type="number" class="form-control" id="e34v1" value="0">
+                </div>
+            </div>
+            <div id="eje35" class="row">
+                <div class="col-md-4">
+                    <label>Valor 1:</label><input type="number" class="form-control" id="e35v1" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor 2:</label><input type="number" class="form-control" id="e35v2" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Valor 3:</label><input type="number" class="form-control" id="e35v3" value="0">
+                </div>
+            </div>
+            <div id="eje36" class="row">
+                <div class="col-md-6">
+                    <label>Número de personas:</label><input type="number" class="form-control" id="e36v1" value="0">
+                </div>
+            </div>
+            <div id="eje37" class="row">
+                <div class="col-md-3">
+                    <label>Tipo de uva (A o B):</label><select class="form-control form-select" id="e37v1">
+                        <option>A</option>
+                        <option>B</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label>Tamaño (1 o 2):</label><select class="form-control form-select" id="e37v2">
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+                </div>
+                <div class="col-md-3">
+                    <label>Precio inicial por kilo:</label><input type="number" class="form-control" id="e37v3"
+                        value="0">
+                </div>
+                <div class="col-md-3">
+                    <label>Kilos producidos:</label><input type="number" class="form-control" id="e37v4" value="0">
+                </div>
+            </div>
+            <div id="eje38" class="row">
+                <div class="col-md-6">
+                    <label>Numero de alumnos:</label><input type="number" class="form-control" id="e38v1" value="0">
+                </div>
+            </div>
+            <div id="eje39" class="row">
+                <div class="col-md-4">
+                    <label>Tiempo de llamada (minutos):</label><input type="number" class="form-control" id="e39v1"
+                        value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Día (ej. Domingo):</label><input type="text" class="form-control" id="e39v2" value="Lunes">
+                </div>
+                <div class="col-md-4">
+                    <label>Turno:</label><select class="form-control form-select" id="e39v3">
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                    </select>
+                </div>
+            </div>
+            <div id="eje40" class="row">
+                <div class="col-md-4">
+                    <label>Tipo (A, B o C):</label><select class="form-control form-select" id="e40v1">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>Kilometros a recorrer:</label><input type="number" class="form-control" id="e40v2" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Numero de personas:</label><input type="number" class="form-control" id="e40v3" value="0">
+                </div>
+            </div>
+            <div id="eje41" class="row">
+                <div class="col-md-6">
+                    <label>Numero de la cita actual:</label><input type="number" class="form-control" id="e41v1"
+                        value="1">
+                </div>
+            </div>
+            <div id="eje42" class="row">
+                <div class="col-md-6">
+                    <label>Zona (1 a 5):</label><input type="number" class="form-control" id="e42v1" value="1" min="1"
+                        max="5">
+                </div>
+                <div class="col-md-6">
+                    <label>Peso (gramos):</label><input type="number" class="form-control" id="e42v2" value="0">
+                </div>
+            </div>
+            <div id="eje43" class="row">
+                <div class="col-md-6">
+                    <label>Tipo de tarjeta (1, 2, 3 u otro):</label><input type="number" class="form-control" id="e43v1"
+                        value="1">
+                </div>
+                <div class="col-md-6">
+                    <label>Limite actual:</label><input type="number" class="form-control" id="e43v2" value="0">
+                </div>
+            </div>
+            <div id="eje44" class="row">
+                <div class="col-md-6">
+                    <label>Valor compra:</label><input type="number" class="form-control" id="e44v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>Sexo (H/M):</label><select class="form-control form-select" id="e44v2">
+                        <option value="H">Hombre</option>
+                        <option value="M">Mujer</option>
+                    </select>
+                </div>
+            </div>
+            <div id="eje45" class="row">
+                <div class="col-md-4">
+                    <label>Numero 1:</label><input type="number" class="form-control" id="e45v1" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Numero 2:</label><input type="number" class="form-control" id="e45v2" value="0">
+                </div>
+                <div class="col-md-4">
+                    <label>Operacion (1:+, 2:-, 3:*, 4:/):</label><input type="number" class="form-control" id="e45v3"
+                        value="1" min="1" max="4">
+                </div>
+            </div>
+            <div id="eje46" class="row">
+                <div class="col-md-6">
+                    <label>Numero entero:</label><input type="number" class="form-control" id="e46v1" value="0">
+                </div>
+                <div class="col-md-6">
+                    <label>1: Primo, 2: Fact, 3: Tabla:</label><input type="number" class="form-control" id="e46v2"
+                        value="1" min="1" max="3">
+                </div>
+            </div>
+            <div id="eje47" class="row">
+                <div class="col-md-6"><label>Ingrese N:</label><input type="number" class="form-control" id="e47v1"
+                        value="0"></div>
+            </div>
+            <div id="eje48" class="row">
+                <div class="col-md-12"><label>Ingrese generos separados por coma (ej. H,M,H,H):</label><input
+                        type="text" class="form-control" id="e48v1" value="H,M"></div>
+            </div>
+            <div id="eje49" class="row">
+                <div class="col-md-12"><label>Ingrese 5 numeros separados por coma:</label><input type="text"
+                        class="form-control" id="e49v1" value="1,2,3,4,5"></div>
+            </div>
+            <div id="eje50" class="row">
+                <div class="col-md-6"><label>Cantidad de datos a mostrar:</label><input type="number"
+                        class="form-control" id="e50v1" value="0"></div>
+            </div>
+            <div id="eje51" class="row">
+                <div class="col-md-12"><label>Ingrese 15 ventas separadas por coma:</label><input type="text"
+                        class="form-control" id="e51v1"
+                        value="100,600,300,450,800,250,551,100,200,300,400,500,600,700,800"></div>
+            </div>
+            <div id="eje52" class="row">
+                <div class="col-md-12"><label>10 cantidades (separadas por coma):</label><input type="text"
+                        class="form-control" id="e52v1" value="10,20,30,40,50,60,70,80,90,100"></div>
+            </div>
+            <div id="eje53" class="row">
+                <div class="col-md-12"><label>Edades (separadas por coma):</label><input type="text"
+                        class="form-control" id="e53v1" value="18,20,19,22,21"></div>
+            </div>
+            <div id="eje54" class="row">
+                <div class="col-md-12"><label>Estaturas (separadas por coma):</label><input type="text"
+                        class="form-control" id="e54v1" value="1.70,1.80,1.65,1.75"></div>
+            </div>
+            <div id="eje55" class="row">
+                <div class="col-md-12"><label>Ahorros mensuales (12 meses, separados por coma):</label><input
+                        type="text" class="form-control" id="e55v1"
+                        value="100,120,150,110,130,140,160,180,100,200,150,170"></div>
+            </div>
+            <div id="eje56" class="row">
+                <div class="col-md-6"><label>N elementos de Fibonacci:</label><input type="number" class="form-control"
+                        id="e56v1" value="10"></div>
+            </div>
+            <div id="eje57" class="row">
+                <div class="col-md-8"><label>Horas trabajadas en 6 días (separadas por coma):</label><input type="text"
+                        class="form-control" id="e57v1" value="8,8,7,9,8,6"></div>
+                <div class="col-md-4"><label>Sueldo por hora:</label><input type="number" class="form-control"
+                        id="e57v2" value="15000"></div>
+            </div>
+            <div id="eje58" class="row">
+                <div class="col-md-6"><label>Km persona 1:</label><input type="number" class="form-control" id="e58v1"
+                        value="70"></div>
+                <div class="col-md-6"><label>Km persona 2:</label><input type="number" class="form-control" id="e58v2"
+                        value="150"></div>
+            </div>
+            <div id="eje59" class="row">
+                <div class="col-md-12"><label>N ventas registradas (separadas por coma):</label><input type="text"
+                        class="form-control" id="e59v1" value="1200,600,400,1500,800,300"></div>
+            </div>
+            <div id="eje60" class="row">
+                <div class="col-md-12"><label>Horas trabajadas por 50 obreros (generadas al azar si se deja vacío o
+                        separadas por coma):</label><input type="text" class="form-control" id="e60v1" value=""></div>
+            </div>
+            <!-- Ejercicio 61: Caja Registradora -->
+            <div id="eje61" class="row">
+                <div class="col-md-5">
+                    <label>Seleccione un vegetal:</label>
+                    <select class="form-control form-select" id="e61v1">
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <label>Cantidad (Unidades/Libras):</label>
+                    <input type="number" class="form-control" id="e61v2" value="1" min="1">
+                </div>
+                <div class="col-md-3">
+                    <label>Opciones:</label>
+                    <button type="button" class="form-control btn btn-danger" onclick="limpiarCarritoEje61()"
+                        style="font-size: 12px; padding: 5px; background-color: #dc3545; color: white; border: none; font-weight: bold; border-radius: 5px; transition: transform 0.2s;">Vaciar
+                        carrito</button>
+                </div>
+            </div>
+            <div id="eje62" class="row">
+                <div class="col-md-12"><label>10 cantidades (separadas por coma):</label><input type="text"
+                        class="form-control" id="e62v1" value="5,10,15,20,25,30,35,40,45,50"></div>
+            </div>
+            <div id="eje63" class="row">
+                <div class="col-md-12"><label>N cantidades (separadas por coma):</label><input type="text"
+                        class="form-control" id="e63v1" value="-5,0,10,-2,8,0,-1"></div>
+            </div>
+            <div id="eje64" class="row">
+                <div class="col-md-12"><label>10 números para el vector (separadas por coma):</label><input type="text"
+                        class="form-control" id="e64v1" value="1,2,3,4,5,6,7,8,9,10"></div>
+            </div>
+            <div id="eje65" class="row">
+                <div class="col-md-12"><label>N datos (positivos y negativos, separados por coma):</label><input
+                        type="text" class="form-control" id="e65v1" value="10,-5,20,-8,0,15,-3"></div>
+            </div>
+            <div id="eje66" class="row">
+                <div class="col-md-6"><label>Dato X a buscar:</label><input type="number" class="form-control"
+                        id="e66v1" value="50"></div>
+                <div class="col-md-6"><label>Vector de 100 elementos autogenerado</label></div>
+            </div>
+            <div id="eje67" class="row">
+                <div class="col-md-12"><label>25 enteros (separados por coma, o dejar vacío para
+                        aleatorios):</label><input type="text" class="form-control" id="e67v1" value=""></div>
+            </div>
+            <div id="eje68" class="row">
+                <div class="col-md-12"><label>Lista de enteros positivos (termine con un negativo):</label><input
+                        type="text" class="form-control" id="e68v1" value="10,20,15,30,-1"></div>
+            </div>
+            <div id="eje69" class="row">
+                <div class="col-md-12"><label>Matriz 5x5 de notas correspondientes a 5 alumnos (generada al
+                        azar)</label></div>
+            </div>
+            <div id="eje70" class="row">
+                <div class="col-md-12"><label>Matriz 5x5 de enteros (generada al azar menores a 100)</label></div>
+            </div>
+            <div id="eje71" class="row">
+                <div class="col-md-12"><label>Dos matrices 3x3 de enteros positivos &lt; 10 (generadas al azar para
+                        multiplicar)</label></div>
+            </div>
+            <div class="col-md-12">
+                <br>
+                <input type="button" class="form-control btn btn-secondary" id="boton-maestro" value="calcular">
+            </div>
+            <div id="res" class="res"></div>
+        </div>
+    </section>
+    <footer>
+        ADSO 3235291 - Desarrollado por Andres Felipe Ortiz <br>
+        &copy; 2026 todos los derechos reservados
+    </footer>
+</body>
+<script src="js/code.js"></script>
+
+</html>
