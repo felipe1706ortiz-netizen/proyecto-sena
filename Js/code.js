@@ -1,14 +1,17 @@
 // ========== Modo Oscuro ==========
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
-    let btn = document.getElementById('darkModeBtn');
+    let moon = document.getElementById('iconMoon');
+    let sun = document.getElementById('iconSun');
     if (document.body.classList.contains('dark-mode')) {
-        btn.innerHTML = '☀️';
-        btn.title = 'Modo Claro';
+        moon.style.display = 'none';
+        sun.style.display = 'block';
+        document.getElementById('darkModeBtn').title = 'Modo Claro';
         localStorage.setItem('darkMode', 'true');
     } else {
-        btn.innerHTML = '🌙';
-        btn.title = 'Modo Oscuro';
+        moon.style.display = 'block';
+        sun.style.display = 'none';
+        document.getElementById('darkModeBtn').title = 'Modo Oscuro';
         localStorage.setItem('darkMode', 'false');
     }
 }
@@ -18,8 +21,13 @@ function toggleDarkMode() {
     if (localStorage.getItem('darkMode') === 'true') {
         document.body.classList.add('dark-mode');
         document.addEventListener('DOMContentLoaded', function () {
-            let btn = document.getElementById('darkModeBtn');
-            if (btn) { btn.innerHTML = '☀️'; btn.title = 'Modo Claro'; }
+            let moon = document.getElementById('iconMoon');
+            let sun = document.getElementById('iconSun');
+            if (moon && sun) {
+                moon.style.display = 'none';
+                sun.style.display = 'block';
+                document.getElementById('darkModeBtn').title = 'Modo Claro';
+            }
         });
     }
 })();
